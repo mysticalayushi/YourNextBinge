@@ -19,7 +19,7 @@ class MovieRecommender:
         else:
             return "Neutral", ["Sci-Fi", "Thriller", "Mystery", "Action", "Fantasy"]
 
-    def recommend_movies(self, user_text="", max_duration=None, target_energy=None, top_n=5):
+    def recommend_movies(self, user_text="", max_duration=None, target_energy=None, top_n=5, exclude_movie_ids=None):
         """Filters movies based on user preferences and mood."""
         filtered_df = self.df.copy()
         
